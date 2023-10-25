@@ -99,18 +99,24 @@ function min(array) {
 function changeColor(option) {
     let body = document.body;
     let header = document.getElementById("header");
-    let nav = document.getElementsByClassName("navButtonLight");
+    let navButtons = document.getElementsByClassName("navButton");
 
     if (option == 1) {
         body.classList.remove('dark-theme');
         body.classList.add('light-theme');
         header.className = "headerLight";
-        nav.className = "navButton navButtonLight";
+        for (let i = 0; i < navButtons.length; i++) {
+            navButtons[i].classList.remove("navButtonDark");
+            navButtons[i].classList.add("navButtonLight");
+        }
     } else {
         body.classList.remove('light-theme');
         body.classList.add('dark-theme');
         header.className = "headerDark";
-        nav.className = "navButton navButtonDark";
+        for (let i = 0; i < navButtons.length; i++) {
+            navButtons[i].classList.remove("navButtonLight");
+            navButtons[i].classList.add("navButtonDark");
+        }
 
     }
 }
