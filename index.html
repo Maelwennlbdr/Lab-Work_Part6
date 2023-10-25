@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <link rel= "stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="js/main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="navButtonLight">Home</a></li>
+                    <li><a href="excel.html" class="navButtonLight">Excel</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <form id="main-form" name="mainform">
+            
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required><br>
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required><br>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required><br>
+            
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required><br>
+            
+            <label for="province">Province</label>
+            <input type="text" id="province" name="province" required><br>
+            
+            <label>Membership Type</label>
+            <div>
+                <input type="radio" id="premium" name="membership" value="Premium Membership" checked>
+                <label for="premium">Premium Membership</label>
+            </div>
+            <div>
+                <input type="radio" id="standard" name="membership" value="Standard Membership">
+                <label for="standard">Standard Membership</label>
+            </div>
+            <div>
+                <input type="radio" id="basic" name="membership" value="Basic Membership">
+                <label for="basic">Basic Membership</label>
+            </div>
+            
+            <button id="send-button" onclick="userForm()" type="button" >Send</button>
+            <button type="reset">Cancel</button>
+        </form>
+
+        <div>
+            <p id="formResult">
+
+            </p>
+        </div>
+        <button onclick="changeColor(2)">Dark Theme</button>
+        <button onclick="changeColor(1)">Light Theme</button>
+        <script>changeColor(1)</script>
+
+        <footer>
+            <p>
+                ILAC & EFREI - HTML, CSS, and JavaScript Assignment - Maelwenn Labidurie
+            </p>
+        </footer>
+
+    </body>
+</html>

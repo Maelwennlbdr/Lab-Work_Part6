@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <title>Excel</title>
+        <meta charset="UTF-8">
+        <link rel= "stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="js/main.js"></script>
+        
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="navButton navButtonLight">Home</a></li>
+                    <li><a href="excel.html" class="navButton navButtonLight">Excel</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <body>
+            <h1>Excel Functions</h1>
+            <form>
+                <label for="numbers">Enter your numbers separated by spaces:</label>
+                <input type="text" id="numbers" name="numbers" required><br>
+                
+                <div>
+                    <input type="radio" id="autoSum" name="calcule" value="AutoSum" checked>
+                    <label for="autoSum">AutoSum</label>
+                </div>
+                <div>
+                    <input type="radio" id="average" name="calcule" value="Average">
+                    <label for="average">Average</label>
+                </div>
+                <div>
+                    <input type="radio" id="max" name="calcule" value="Max">
+                    <label for="max">Max</label>
+                </div>
+                <div>
+                    <input type="radio" id="min" name="calcule" value="Min">
+                    <label for="min">Min</label>
+                </div>
+                
+                <button id="send-button" onclick="myExcelFuns()" type="button" >Calculate</button><br>
+                <label for="result">Result:</label>
+                <input type="text" id="result" readonly>
+            </form>
+
+            <button onclick="changeColor(2)">Dark Theme</button>
+            <button onclick="changeColor(1)">Light Theme</button>
+        </body>
+        <script>changeColor(1)</script>
+
+        <footer>
+            <p>
+                ILAC & EFREI - HTML, CSS, and JavaScript Assignment - Maelwenn Labidurie
+            </p>
+        </footer>
+    </body>
+</html>
